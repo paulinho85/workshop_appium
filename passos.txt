@@ -1,0 +1,14 @@
+1 - Criar a pasta do projeto
+2 - Iniciar o NPM
+3 - Instalar o webdriverio
+
+4 - Criar arquivo de testes
+5 - Configurar plataforma (app, device name, platform name...) - cabapbilities
+6 - Configurar apontamento appium
+7 - Criar cenário startando o appium
+
+
+Pontos de melhoria
+- Arquitetura (Iniciar e finalizar os testes)
+- Aplicar Page Object
+- Ações (Criar nosso próprio framework
