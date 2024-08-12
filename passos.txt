@@ -10,5 +10,5 @@
 
 Pontos de melhoria
 - Arquitetura (Iniciar e finalizar os testes)
-- Aplicar Page Object
-- Ações (Criar nosso próprio framework
+- Page Objects
+- Ações (Criar nosso próprio framework)

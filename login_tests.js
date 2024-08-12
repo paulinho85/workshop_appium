@@ -6,10 +6,20 @@ const androidCapabilities = {
     "appium:platformName": "Android",
     "appium:automationName": "UiAutomator2",
     "appium:deviceName": "a21ad1ae",
-    "appium:app": "D:\\Documentos\\workshop-appium\\apps\\app-release.apk",
+    "appium:app": "D:\\Documentos\\Projetos_GitHub\\workshop-appium\\apps\\app-release.apk",
     "appium:appPackage": "com.qazandoqafood",
-    "appium:appActivity": ".MainActivity"
+    "appium:appActivity": ".MainActivity"    
 }
+
+const iOSCapabilities = {
+    "appium:platformName": "iOS",
+    "appium:automationName": "XCUITest",
+    "appium:deviceName": "iphone 11",
+    "appium:platformVersion": "15.2",
+    "appium:app": "D:\\Documentos\\Projetos_GitHub\\workshop-appium\\apps\\app-release.apk",
+    "appium:noReset": false,
+}
+
 
 // Configurar o WebDriverIO/Appium
 const optionsAppiumServer = {
@@ -50,9 +60,9 @@ async function runTest2() {
     
 
     await driver.pause(1000)
-    //await driver.deleteSession()
+    await driver.deleteSession()
 }
 
 // Chamar o cenário de teste
-//runTest()
-runTest2()
+runTest()
+//runTest2()
