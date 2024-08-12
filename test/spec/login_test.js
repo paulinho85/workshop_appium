@@ -1,4 +1,6 @@
 import { init, end } from "../../config.js";
+import { expect } from "chai";
+import { cliqueEntrar, preencherEmail, preencherSenha, validaLoginError, validaLoginSucesso } from "../pages/login_page.js";
 
 describe('Login', () => {
 
@@ -15,15 +17,30 @@ describe('Login', () => {
         await end(driver)        
     });
 
-    it.only('Login com email inválido', async () => {
-        await driver.$('accessibility id:email').setValue('teste@teste.com')
+    
+    it('Login com email inválido', async () => {
+        await preencherEmail(driver, "error@teste.com")
+        await preencherSenha(driver, "123456")
+        await cliqueEntrar(driver)
+        await validaLoginError(driver)        
     });
     
     it('Login com senha inválida', async () => {
-        await driver.$('accessibility id:email').setValue('teste@teste.com')
+        await preencherEmail(driver, "teste@teste.com")
+        await preencherSenha(driver, "xxxxxx")
+        await cliqueEntrar(driver)
+        await validaLoginError(driver)   
+    });
+
+    it('Login com email e senha vazios', async () => {      
+        await cliqueEntrar(driver)
+        await validaLoginError(driver)   
     });
 
     it('Login com sucesso', async () => {        
-        await driver.$('accessibility id:email').setValue('teste@teste.com')
+        await preencherEmail(driver, 'teste@teste.com')
+        await preencherSenha(driver, '123456')
+        await cliqueEntrar(driver)
+        await validaLoginSucesso(driver)
     });
 });

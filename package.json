@@ -5,14 +5,16 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test:android": "set PLATFORM=android&& mocha './test/spec/**/*.js'",
-    "test:ios": "set PLATFORM=ios&& mocha './test/spec/**/*.js'"
+    "test:android": "set PLATFORM=android&& mocha './test/spec/**/*.js' --reporter mochawesome",
+    "test:ios": "set PLATFORM=ios&& mocha './test/spec/**/*.js' --reporter mochawesome"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^5.1.1",
     "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3",
     "webdriverio": "^8.39.1",
     "workshop-appium": "file:"
   }

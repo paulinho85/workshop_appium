@@ -1,0 +1,195 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-08-12T23:12:56.406Z",
+    "end": "2024-08-12T23:14:15.351Z",
+    "duration": 78945,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d6a546b9-403b-4f8d-8ca5-93d8ed15556e",
+      "title": "",
+      "fullFile": "D:\\Documentos\\Projetos_GitHub\\workshop-appium\\test\\spec\\login_test.js",
+      "file": "\\test\\spec\\login_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+          "title": "Login",
+          "fullFile": "D:\\Documentos\\Projetos_GitHub\\workshop-appium\\test\\spec\\login_test.js",
+          "file": "\\test\\spec\\login_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login\"",
+              "fullTitle": "Login \"before each\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 6665,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('********************************************')\nconsole.log('Iniciando execução para: ' + process.env.PLATFORM)\nconsole.log('********************************************')\ndriver = await init(process.env.PLATFORM)",
+              "err": {},
+              "uuid": "6a311f90-c5b1-4c0c-9e45-9f876a4a4554",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Login\"",
+              "fullTitle": "Login \"after all\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 1621,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await end(driver)",
+              "err": {},
+              "uuid": "3dddb140-d12a-4e40-9135-cc2b9a1bdd3f",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login com email inválido",
+              "fullTitle": "Login Login com email inválido",
+              "timedOut": false,
+              "duration": 8989,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"error@teste.com\")\nawait preencherSenha(driver, \"123456\")\nawait cliqueEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "89df39af-9e41-4bfe-8288-2aa3baf35051",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha inválida",
+              "fullTitle": "Login Login com senha inválida",
+              "timedOut": false,
+              "duration": 9018,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"teste@teste.com\")\nawait preencherSenha(driver, \"xxxxxx\")\nawait cliqueEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "f43e5897-b4cd-464b-b3cc-7ab00e45544d",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email e senha vazios",
+              "fullTitle": "Login Login com email e senha vazios",
+              "timedOut": false,
+              "duration": 5364,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await cliqueEntrar(driver)\n  await validaLoginError(driver)",
+              "err": {},
+              "uuid": "35b85e1b-fef8-4e7d-94ef-a38077dd3e1a",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login Login com sucesso",
+              "timedOut": false,
+              "duration": 8690,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, 'teste@teste.com')\nawait preencherSenha(driver, '123456')\nawait cliqueEntrar(driver)\nawait validaLoginSucesso(driver)",
+              "err": {},
+              "uuid": "fc5a77fe-710a-420e-a55c-39226edcccc8",
+              "parentUUID": "b11e8829-3d5d-41ba-8cec-be869bd8b37d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "89df39af-9e41-4bfe-8288-2aa3baf35051",
+            "f43e5897-b4cd-464b-b3cc-7ab00e45544d",
+            "35b85e1b-fef8-4e7d-94ef-a38077dd3e1a",
+            "fc5a77fe-710a-420e-a55c-39226edcccc8"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 32061,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 30000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 30000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.7.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
